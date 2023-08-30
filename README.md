@@ -5,7 +5,8 @@ PhonoQ is a deep learning model used to compute phonetic-based features related 
 
 # References
 If you use PhonoQ, please cite the following book:
-Arias-Vergara, T. (2022). Analysis of Pathological Speech Signals (Vol. 50). Logos Verlag Berlin GmbH.
+
+- Arias-Vergara, T. (2022). Analysis of Pathological Speech Signals (Vol. 50). Logos Verlag Berlin GmbH.
 
 # Publications:
  - Arias-Vergara, T., Londoño-Mora, E., Pérez-Toro, P.A., Schuster, M., Nöth, E., Orozco-Arroyave, J.R., Maier, A. (2023) Measuring Phonological Precision in Children with Cleft Lip and Palate. Proceedings of the 24th INTERSPEECH, pp. 4638-4642.

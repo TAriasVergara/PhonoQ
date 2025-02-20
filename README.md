@@ -7,6 +7,8 @@ PhonoQ is a deep learning model used to compute phonetic-based features related 
 - Arias-Vergara, T. (2022). Analysis of Pathological Speech Signals. Logos Verlag Berlin GmbH,Vol. 50.
 
 # Related publications
+ - Arias-Vergara, T., Pérez-Toro P.A., Liu X., Xing F., Stone M., Zhuo J., Prince J., Schuster M., Noeth E., Woo J., & Maier, A. (2024). Contrastive Learning Approach for Assessment of Phonological Precision in Patients with Tongue Cancer Using MRI Data. In Proceedings of the 25th  Interspeech, 927-931.
+ 
  - Arias-Vergara, T., Londoño-Mora, E., Pérez-Toro, P.A., Schuster, M., Nöth, E., Orozco-Arroyave, J.R., Maier, A. (2023) Measuring Phonological Precision in Children with Cleft Lip and Palate. Proceedings of the 24th INTERSPEECH, pp. 4638-4642.
 
 - Pérez-Toro, P. A., Rodríguez-Salas, D., Arias-Vergara, T., Bayerl, S. P., Klumpp, P., Riedhammer, K., ... & Orozco-Arroyave, J. R. (2023, June). Transferring Quantified Emotion Knowledge for the Detection of Depression in Alzheimer’s Disease Using Forestnets. In Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), pp. 1-5.

@@ -1,5 +1,14 @@
 # PhonoQ
-PhonoQ is a deep learning model used to compute phonetic-based features related to duration, rate, rhythm*, and goodness of pronunciation* of 18 phonological classes
+PhonoQ (Phono Cue) is a deep learning model used to compute phonetic-based features related to duration, rate, rhythm*, and goodness of pronunciation* of 18 phonological classes
+
+PhonoQ converts a sequence of speech frames $\vec{S_t} = \{\vec{s}_0,\vec{s}_1,..., \vec{s}_{T-1}\}$ into a sequence of phoneme posterior probabilities $\vec{Y_t}[\vec{z}] = \{\vec{y}_0[\vec{z}],\vec{y}_1[\vec{z}],..., \vec{y}_{T-1}[\vec{z}]\}$, where $\vec{z}=1,2,\dots,z,\dots,Z$ are all the possible phoneme groups~\citep{Cernak2015phonological}; 
+thus, $y_t[z]$ is the probability of occurrence of the $z$-th phoneme class in the $t$-th speech frame.
+In this thesis, phoneme precision is evaluated considering three main dimensions: 
+\begin{enumerate}
+    \item Manner of articulation: Refers to the way the speech articulators are set so that different consonants and vowels can be produced.
+    \item Place of articulation: The point of contact where an obstruction occurs in the vocal tract in order to produce different speech sounds
+    \item Voicing: Activity of the vocal folds, i.e., whether a phoneme is voiced or voiceless
+\end{enumerate}
 
 #THIS PAGE IS UNDER CONSTRUCTION
 

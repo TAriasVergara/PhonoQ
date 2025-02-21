@@ -28,13 +28,14 @@ Phonemic features evaluated considering **Manner of articulation**, **Place of a
 | 17 |           | Voiced       | /m/, /n/, /b/, /d/, /g/, /a/    | Vibration of the vocal folds               |
 
 # Architecture
-
+![Alt Text](PhonoQ_Architectures.png)
 
 # Phonemic features
 For each phonemic group $`z`$, the following features are computed:
  - $`\mathrm{MaxPh}`$: Average of the maximum phoneme posteriors.
  - $`LLR-Ph`$: Average posterior log-likelihood ratio:  $`LLR = \log \left(\frac{p[z]}{1-p[z]}\right)`$ with $`p[z] =\frac{1}{T}\displaystyle\sum_{t=0}^{T}\vec{y_t}[z]`$ where $`p[z]`$ is the average posterior probability of the $`z`$-th phoneme group.
  - $`\mathrm{durPh}`$: Average phoneme duration.
+ - $`\mathrm{stdPh}`$: Standard deviation of phoneme duration.
  - $`rPVI/nPVI`$: raw and normalized Pairwise Variability Index to measure the duration variability of successive vowels and consonants [1]:
    
    $`rPVI = \frac{1}{D-1}\displaystyle\sum_{i=1}^{D-1}\left|d_i-d_{i+1} \right|`$;  $`nPVI = \frac{100}{D-1}\displaystyle\sum_{i=1}^{D-1}\left| \frac{d_i-d_{i+1}}{0.5(d_i+d_{i+1})} \right|`$

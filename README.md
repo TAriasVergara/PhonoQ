@@ -2,7 +2,7 @@
 PhonoQ (Phono Cue) is a deep learning model used to compute phonemic features (also known as phonological features) related to duration, rate, rhythm*, and goodness of pronunciation* of 18 phonological classes
 
 PhonoQ converts a sequence of speech frames $`\vec{S_t} = \{\vec{s}_0,\vec{s}_1,..., \vec{s}_{T-1}\}`$ into a sequence of phoneme posterior probabilities $`\vec{Y_t}[\vec{z}] = \{\vec{y}_0[\vec{z}],\vec{y}_1[\vec{z}],..., \vec{y}_{T-1}[\vec{z}]\}`$, where $`\vec{z}=1,2,\dots,z,\dots,Z`$  where $y_t[z]$ is the probability of occurrence of the $z$-th phonemic group in the $t$-th speech frame.
-
+![Alt Text](https://github.com/PhonoQ_General_Pipeline.png)
 Phonemic features evaluated considering **Manner of articulation**, **Place of articulation**, and **Voicing**: 
 
 | $`z`$  | Dimension | Class         | Phonemes                        | Brief description                      |

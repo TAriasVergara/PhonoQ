@@ -2,7 +2,8 @@
 PhonoQ (Phono Cue) is a deep learning model used to compute phonemic features (also known as phonological features) related to duration, rate, rhythm*, and goodness of pronunciation* of 18 phonological classes
 
 PhonoQ converts a sequence of speech frames $`\vec{S_t} = \{\vec{s}_0,\vec{s}_1,..., \vec{s}_{T-1}\}`$ into a sequence of phoneme posterior probabilities $`\vec{Y_t}[\vec{z}] = \{\vec{y}_0[\vec{z}],\vec{y}_1[\vec{z}],..., \vec{y}_{T-1}[\vec{z}]\}`$, where $`\vec{z}=1,2,\dots,z,\dots,Z`$  where $y_t[z]$ is the probability of occurrence of the $z$-th phonemic group in the $t$-th speech frame.
-![Alt Text](https://github.com/PhonoQ_General_Pipeline.png)
+![Alt Text](PhonoQ_General_Pipeline.png)
+
 Phonemic features evaluated considering **Manner of articulation**, **Place of articulation**, and **Voicing**: 
 
 | $`z`$  | Dimension | Class         | Phonemes                        | Brief description                      |
@@ -26,7 +27,17 @@ Phonemic features evaluated considering **Manner of articulation**, **Place of a
 | 16 | Voicing   | Voiceless    | /p/, /t/, /k/, /ʃ/, /s/         | No vibration of the vocal folds            |
 | 17 |           | Voiced       | /m/, /n/, /b/, /d/, /g/, /a/    | Vibration of the vocal folds               |
 
+# Architecture
 
+
+# Phonemic features
+For each phonemic group $`z`$, the following features are computed:
+ - $`\mathrm{MaxPh}`$: Average of the maximum phoneme posteriors.
+ - $`LLR-Ph`$: Average posterior log-likelihood ratio:  $`LLR = \log \left(\frac{p[z]}{1-p[z]}\right)`$ with $`p[z] =\frac{1}{T}\displaystyle\sum_{t=0}^{T}\vec{y_t}[z]`$ where $`p[z]`$ is the average posterior probability of the $`z`$-th phoneme group.
+ - $`\mathrm{durPh}`$: Average phoneme duration.
+ - $`rPVI/nPVI`$: raw and normalized Pairwise Variability Index to measure the duration variability of successive vowels and consonants [1]:
+   
+   $`rPVI = \frac{1}{D-1}\displaystyle\sum_{i=1}^{D-1}\left|d_i-d_{i+1} \right|`$;  $`nPVI = \frac{100}{D-1}\displaystyle\sum_{i=1}^{D-1}\left| \frac{d_i-d_{i+1}}{0.5(d_i+d_{i+1})} \right|`$
 # Cite as
 - Arias-Vergara, T. (2022). Analysis of Pathological Speech Signals. Logos Verlag Berlin GmbH,Vol. 50.
 
@@ -40,6 +51,9 @@ Phonemic features evaluated considering **Manner of articulation**, **Place of a
 - Pérez-Toro, P.A., Arias-Vergara, T., Braun, F., Hönig, F., Tobón-Quintero, C.A., Aguillón, D., Lopera, F., Hincapié-Henao, L., Schuster, M., Riedhammer, K., Maier, A., Nöth, E., Orozco-Arroyave, J.R. (2023) Automatic Assessment of Alzheimer's across Three Languages Using Speech and Language Features. Proceedings of the 24th INTERSPEECH, pp. 1748-1752.
 
 - Arias-Vergara, T., Klumpp, P., Vasquez-Correa, J. C., Nöth, E., Orozco-Arroyave, J. R., & Schuster, M. (2021). Multi-channel spectrograms for speech processing applications using deep learning methods. Pattern Analysis and Applications, 24, 423-431.
+
+ ### References
+ [1] Grabe, E. and Low, E. L. (2002). Durational variability in speech and the rhythm class hypothesis. Papers in laboratory phonology, 7(515-546)
 
 - Arias-Vergara, Tomás, Orozco-Arroyave, J. R., Cernak, M., Gollwitzer, S., Schuster, M., Nöth., E. (2019). Phone-attribute posteriors to evaluate the speech of cochlear implant users. In Proceeding of the 20th INTERSPEECH, Graz, Austria, pp. 3108-3112. 
 

@@ -1,16 +1,31 @@
 # PhonoQ
-PhonoQ (Phono Cue) is a deep learning model used to compute phonetic-based features related to duration, rate, rhythm*, and goodness of pronunciation* of 18 phonological classes
+PhonoQ (Phono Cue) is a deep learning model used to compute phonemic features (also known as phonological features) related to duration, rate, rhythm*, and goodness of pronunciation* of 18 phonological classes
 
-PhonoQ converts a sequence of speech frames $\vec{S_t} = \{\vec{s}_0,\vec{s}_1,..., \vec{s}_{T-1}\}$ into a sequence of phoneme posterior probabilities $\vec{Y_t}[\vec{z}] = \{\vec{y}_0[\vec{z}],\vec{y}_1[\vec{z}],..., \vec{y}_{T-1}[\vec{z}]\}$, where $\vec{z}=1,2,\dots,z,\dots,Z$ are all the possible phoneme groups~\citep{Cernak2015phonological}; 
-thus, $y_t[z]$ is the probability of occurrence of the $z$-th phoneme class in the $t$-th speech frame.
-In this thesis, phoneme precision is evaluated considering three main dimensions: 
-\begin{enumerate}
-    \item Manner of articulation: Refers to the way the speech articulators are set so that different consonants and vowels can be produced.
-    \item Place of articulation: The point of contact where an obstruction occurs in the vocal tract in order to produce different speech sounds
-    \item Voicing: Activity of the vocal folds, i.e., whether a phoneme is voiced or voiceless
-\end{enumerate}
+PhonoQ converts a sequence of speech frames $`\vec{S_t} = \{\vec{s}_0,\vec{s}_1,..., \vec{s}_{T-1}\}`$ into a sequence of phoneme posterior probabilities $`\vec{Y_t}[\vec{z}] = \{\vec{y}_0[\vec{z}],\vec{y}_1[\vec{z}],..., \vec{y}_{T-1}[\vec{z}]\}`$, where $`\vec{z}=1,2,\dots,z,\dots,Z`$  where $y_t[z]$ is the probability of occurrence of the $z$-th phonemic group in the $t$-th speech frame.
 
-#THIS PAGE IS UNDER CONSTRUCTION
+Phonemic features evaluated considering **Manner of articulation**, **Place of articulation**, and **Voicing**: 
+
+| $`z`$  | Dimension | Class         | Phonemes                        | Brief description                      |
+|----|-----------|--------------|---------------------------------|---------------------------------------------|
+| 0  | -         | Silence      | -                               | Non-speech segments                        |
+| 1  | Manner    | Stop         | /p/, /t/, /k/, /b/, /d/, /g/    | Total oral closure with rapid release      |
+| 2  |           | Nasal        | /n/, /m/, /ŋ/                   | Airflow through the nasal cavity           |
+| 3  |           | Trill        | /r/, /ʀ/                        | Turbulent airflow                          |
+| 4  |           | Fricative    | /s/, /ʃ/, /z/, /f/              | Hissing sounds due to turbulent airflow    |
+| 5  |           | Approximants | /j/                             | Hissing sounds without turbulent airflow   |
+| 6  |           | Lateral      | /l/                             | The air passes at the sides of the tongue  |
+| 7  |           | Vowel        | /a/, /e/, /i/, /o/, /u/         | Vibration of the vocal folds               |
+| 8  | Place     | Labial       | /p/, /b/, /m/, /f/, /v/         | Lips and teeth                             |
+| 9  |           | Alveolar     | /t/, /d/, /n/                   | Tip of the tongue and alveolar ridge       |
+| 10 |           | Velar        | /k/, /g/, /ŋ/                   | Back of the tongue and soft palate         |
+| 11 |           | Palatal      | /j/                             | Front of the tongue and hard palate        |
+| 12 |           | Postalveolar | /ʃ/                             | Blade of the tongue                        |
+| 13 |           | Central      | /a/, /aː/                       | Tongue halfway in the mouth                |
+| 14 |           | Front        | /i/, /e/                        | Tongue on the front of the mouth           |
+| 15 |           | Back         | /u/, /o/                        | Tongue on the back of the mouth            |
+| 16 | Voicing   | Voiceless    | /p/, /t/, /k/, /ʃ/, /s/         | No vibration of the vocal folds            |
+| 17 |           | Voiced       | /m/, /n/, /b/, /d/, /g/, /a/    | Vibration of the vocal folds               |
+
 
 # Cite as
 - Arias-Vergara, T. (2022). Analysis of Pathological Speech Signals. Logos Verlag Berlin GmbH,Vol. 50.
@@ -23,5 +38,9 @@ In this thesis, phoneme precision is evaluated considering three main dimensions
 - Pérez-Toro, P. A., Rodríguez-Salas, D., Arias-Vergara, T., Bayerl, S. P., Klumpp, P., Riedhammer, K., ... & Orozco-Arroyave, J. R. (2023, June). Transferring Quantified Emotion Knowledge for the Detection of Depression in Alzheimer’s Disease Using Forestnets. In Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), pp. 1-5.
 
 - Pérez-Toro, P.A., Arias-Vergara, T., Braun, F., Hönig, F., Tobón-Quintero, C.A., Aguillón, D., Lopera, F., Hincapié-Henao, L., Schuster, M., Riedhammer, K., Maier, A., Nöth, E., Orozco-Arroyave, J.R. (2023) Automatic Assessment of Alzheimer's across Three Languages Using Speech and Language Features. Proceedings of the 24th INTERSPEECH, pp. 1748-1752.
+
+- Arias-Vergara, T., Klumpp, P., Vasquez-Correa, J. C., Nöth, E., Orozco-Arroyave, J. R., & Schuster, M. (2021). Multi-channel spectrograms for speech processing applications using deep learning methods. Pattern Analysis and Applications, 24, 423-431.
+
+- Arias-Vergara, Tomás, Orozco-Arroyave, J. R., Cernak, M., Gollwitzer, S., Schuster, M., Nöth., E. (2019). Phone-attribute posteriors to evaluate the speech of cochlear implant users. In Proceeding of the 20th INTERSPEECH, Graz, Austria, pp. 3108-3112. 
 
 

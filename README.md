@@ -53,9 +53,9 @@ For each phonemic group $`z`$, the following features are computed:
 
 - Arias-Vergara, T., Klumpp, P., Vasquez-Correa, J. C., Nöth, E., Orozco-Arroyave, J. R., & Schuster, M. (2021). Multi-channel spectrograms for speech processing applications using deep learning methods. Pattern Analysis and Applications, 24, 423-431.
 
+- Arias-Vergara, Tomás, Orozco-Arroyave, J. R., Cernak, M., Gollwitzer, S., Schuster, M., Nöth., E. (2019). Phone-attribute posteriors to evaluate the speech of cochlear implant users. In Proceeding of the 20th INTERSPEECH, Graz, Austria, pp. 3108-3112. 
+
  ### References
  [1] Grabe, E. and Low, E. L. (2002). Durational variability in speech and the rhythm class hypothesis. Papers in laboratory phonology, 7(515-546)
-
-- Arias-Vergara, Tomás, Orozco-Arroyave, J. R., Cernak, M., Gollwitzer, S., Schuster, M., Nöth., E. (2019). Phone-attribute posteriors to evaluate the speech of cochlear implant users. In Proceeding of the 20th INTERSPEECH, Graz, Austria, pp. 3108-3112. 
 
 

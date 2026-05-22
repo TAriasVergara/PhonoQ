@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "phonoq"
+version = "0.1.0"
+description = "Optimized PyTorch implementation of PhonoQ phonological-posterior speech features, with model caching, GPU support, and batched inference."
+authors = [{name = "Paula Perez Toro", email = "paula.andrea.perez@fau.de"}]
+readme = "docs/phonoq-python-library.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+keywords = ["speech", "phonological-posteriors", "parkinsons", "dysarthria"]
+
+dependencies = [
+    "numpy>=1.23",
+    "scipy>=1.10",
+    "torch>=2.0",
+    "librosa>=0.10",
+    "soundfile>=0.12",
+]
+
+[project.urls]
+Repository = "https://git5.cs.fau.de/perez/pd-speech-medication"
+Original = "https://github.com/TAriasVergara/PhonoQ"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["phonoq*"]

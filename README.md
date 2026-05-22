@@ -4,6 +4,37 @@ PhonoQ (Phono Cue) is a deep learning model used to compute phonemic features (a
 PhonoQ converts a sequence of speech frames $`\vec{S_t} = \{\vec{s}_0,\vec{s}_1,..., \vec{s}_{T-1}\}`$ into a sequence of phoneme posterior probabilities $`\vec{Y_t}[\vec{z}] = \{\vec{y}_0[\vec{z}],\vec{y}_1[\vec{z}],..., \vec{y}_{T-1}[\vec{z}]\}`$, where $`\vec{z}=1,2,\dots,z,\dots,Z`$  where $y_t[z]$ is the probability of occurrence of the $z$-th phonemic group in the $t$-th speech frame.
 ![Alt Text](PhonoQ_General_Pipeline.png)
 
+## Python package installation
+
+While this branch is under review, the optimized Python package can be installed directly with pip:
+
+```bash
+pip install git+https://github.com/TAriasVergara/PhonoQ.git@phonoq-python-library
+```
+
+After this branch is merged into the default branch, the branch selector is no longer needed:
+
+```bash
+pip install git+https://github.com/TAriasVergara/PhonoQ.git
+```
+
+After installation, use it as:
+
+```python
+from phonoq import PhonoQ
+
+pq = PhonoQ(lang="ES", model_root="path/to/PhonoQ")
+out = pq.extract_file("audio.wav")
+```
+
+For local development after cloning this branch:
+
+```bash
+git clone -b phonoq-python-library https://github.com/TAriasVergara/PhonoQ.git
+cd PhonoQ
+pip install -e .
+```
+
 Phonemic features evaluated considering **Manner of articulation**, **Place of articulation**, and **Voicing**: 
 
 | $`z`$  | Dimension | Class         | Phonemes                        | Brief description                      |

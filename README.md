@@ -6,10 +6,16 @@ PhonoQ converts a sequence of speech frames $`\vec{S_t} = \{\vec{s}_0,\vec{s}_1,
 
 ## Python package installation
 
-The optimized Python package in this branch can be installed directly with pip:
+While this branch is under review, the optimized Python package can be installed directly with pip:
 
 ```bash
 pip install git+https://github.com/TAriasVergara/PhonoQ.git@phonoq-python-library
+```
+
+After this branch is merged into the default branch, the branch selector is no longer needed:
+
+```bash
+pip install git+https://github.com/TAriasVergara/PhonoQ.git
 ```
 
 After installation, use it as:
